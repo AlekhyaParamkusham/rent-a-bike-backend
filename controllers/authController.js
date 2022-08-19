@@ -81,7 +81,7 @@ exports.forgotPassword = catchAsync(async (req, res, next) => {
   // 3) Send it to user's email
   const resetURL = `${req.protocol}://rent-a-bike-server.herokuapp.com/users/resetPassword/${resetToken}`;
 
-  const clientURL = `${req.protocol}://localhost:3000/reset/${resetToken}`;
+  const clientURL = `${req.protocol}://rent-abike.netlify.app/reset/${resetToken}`;
 
   const message = `Forgot your password? Submit a PATCH request with your new password and passwordConfirm to: ${resetURL}.\nIf you didn't forget your password, please ignore this email!
   Go to: ${clientURL}`;
